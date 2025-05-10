@@ -29,11 +29,11 @@ class Program
     private static void ProcessTriangle()
     {
         Console.Write("Введите длину первого катета (a): ");
-        if (!GetValidInput(out double a))
+        if (!IsValidInput(out double a))
             return;
 
         Console.Write("Введите длину второго катета (b): ");
-        if (!GetValidInput(out double b))
+        if (!IsValidInput(out double b))
             return;
 
         try
@@ -71,7 +71,7 @@ class Program
         Console.WriteLine($"Явное приведение к bool: {(bool)triangle}");
     }
 
-    private static bool GetValidInput(out double value)
+    private static bool IsValidInput(out double value)
     {
         value = 0;
         string input = Console.ReadLine();
